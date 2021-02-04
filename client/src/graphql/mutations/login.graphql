@@ -1,0 +1,10 @@
+mutation Login($identifier: String!, $password: String!) {
+  login(options: { identifier: $identifier, password: $password }) {
+    user {
+      ...RegularUser
+    }
+    errors {
+      ...RegularError
+    }
+  }
+}

@@ -1,0 +1,5 @@
+query Posts($limit: Int!, $after: String){
+    posts(limit: $limit after: $after){
+    ...RegularPosts
+  }
+}

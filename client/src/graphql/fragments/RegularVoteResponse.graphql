@@ -1,0 +1,5 @@
+fragment RegularVoteResponse on VoteResponse{
+    error,
+    points,
+    voteStatus
+}

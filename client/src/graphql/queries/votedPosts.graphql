@@ -1,0 +1,5 @@
+query VotedPosts($value: Int!, $id: Int!){
+    votedPosts(value: $value, id: $id){
+        ...RegularPosts
+    }
+}

@@ -1,0 +1,7 @@
+mutation Vote($postId: Int!, $value: Int!){
+    vote(postId: $postId, value: $value){
+        points
+        error
+        voteStatus
+    }
+}

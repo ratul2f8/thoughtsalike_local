@@ -1,0 +1,15 @@
+Follow the steps to execute local build(server)
+1) install redis and start the server by running:
+   -> redis-server
+2) install postgresql, create a user named "hr" with password "0000"
+   and create a database named "thoughtsalike" by running:
+   -> sudo -u postgres createdb thoughtsalike
+   or update the connection profile of /server/src/index.ts according to your configuration
+3) for running migrartions in /server/src/migrartions/* folder, you have to create a user first, since we have foreign-key(user.id) as a dependency.After that replace the post.creatorId with the newely created user.id
+or regenerate the migrartions through mockaroo or other tools with the command(locally)
+-> yarn typeorm migrartion:generate
+and move them to the /server/src/migrartions folder
+****be careful in case of deleting migrations, they will be stored in /server/dist folder for the runtime****
+
+For generating codegen types execute the command(locally)
+ -> yarn gen

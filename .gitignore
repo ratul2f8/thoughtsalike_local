@@ -1,0 +1,8 @@
+/client/node_modules
+/client/.next
+/client/out
+/client/build
+/client/yarn-error.log
+/server/node_modules
+/server/dist
+/server/yarn-error.log
